@@ -53,6 +53,7 @@
             </div>
         </section> 
     
+        <span></span>
         <section>
             <div id="body_3D">
                 <div id="card">
@@ -63,15 +64,15 @@
 
                         <div class="card_button">
                             <label class="switch">
-                                <input class="cb" type="checkbox" />
+                                <input class="cb" type="checkbox" id="open_light"/>
                                 <span class="toggle">
                                     <span class="left">off</span>
                                     <span class="right">on</span>
                                 </span>
                             </label>
-                            <img class = "switch_on" src="../../img/lights_off.png" alt="light">
+                            <img id="switch_on" src="../../img/lights_off.png" alt="light">
                         </div>  
-                        
+
                         <div class="card_button">
                             <label class="switch">
                                 <input class="cb" type="checkbox" />
@@ -80,7 +81,25 @@
                                     <span class="right">on</span>
                                 </span>
                             </label>
-                            <img class = "switch_on" src="../../img/lights_off.png" alt="light">
+                            <img src="../../img/termosifone.png" alt="termos">
+                        </div> 
+
+                        <div class="card_button">
+                            <label class="switch">
+                                <input class="cb" type="checkbox" id="open_door"/>
+                                <span class="toggle">
+                                    <span class="left">off</span>
+                                    <span class="right">on</span>
+                                </span>
+                            </label>
+                            <img id="door_on" src="../../img/door_closed.png" alt="door">
+                        </div> 
+
+                        <div class="card_button">
+                            <img src="../../img/termostato.png" alt="temperature">
+                            <label class="slider">
+                                <input type="range" value="36" min="0" max="50" step="1" class="level">
+                            </label>
                         </div>
 
                         <div class="card_button">
@@ -91,19 +110,34 @@
                                     <span class="right">on</span>
                                 </span>
                             </label>
-                            <img class = "switch_on" src="../../img/lights_off.png" alt="light">
-                        </div>
+                            <img src="../../img/telecamera.png" alt="camera">
+                        </div> 
 
-                        <div class="card_button">
+                        <div class="card_button" id="close">
                             <label class="switch">
-                                <input class="cb" type="checkbox" />
+                                <input class="cb" type="checkbox" id="open_lock"/>
                                 <span class="toggle">
                                     <span class="left">off</span>
                                     <span class="right">on</span>
                                 </span>
                             </label>
-                            <img class = "switch_on" src="../../img/lights_off.png" alt="light">
-                        </div>
+                            <img id="lock_on" src="../../img/unblock.png" alt="lock">
+                        </div> 
+                            
+                        <div class="special_card_button">
+                            <h1 id="h1_temp">36</h1><h1>&#8451;</h1>
+                            <img src="../../img/temperature.png" alt="up_and_down_temperature" id="termost">
+                        </div> 
+
+                        <div class="special_card_button">
+                            <h1 id="h1_watt">0</h1><h1>W</h1>
+                            <img src="../../img/watt.png" alt="watt" id="watt">
+                        </div> 
+
+                        <div class="special_card_button">
+                            <h1 id="h1_hour"></h1>
+                            <img src="../../img/clock.png" alt="clock" id="clock">
+                        </div> 
 
                     </div>
 

@@ -43,8 +43,8 @@ h1.title {
     
     display: flex;
     flex-direction: column;
-    align-items: center !important;
-    justify-content: center !important;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -67,12 +67,9 @@ h1.title {
 #card {
     background-color: var(--black_card);
     border-radius: 20px;
-    
-    position: relative;
-    top: -5vh;    
-    width: 25vw;
-    height: 60vh;
-    
+
+    width: 35vw;
+    height: auto;
 
     min-width: 300px;
 
@@ -93,7 +90,7 @@ h1.title {
     border-radius: 10px;
 
     margin: 0 auto;
-    width: 60%;
+    width: 15vw;
 
     margin-top: 10px;
     padding: 0px;
@@ -112,23 +109,67 @@ h1.title {
     display: flex;
     flex-direction: row;
     
-    width: 40%;
+    width: auto;
+    height: 4em;
 
-    padding-top: 20px;
-    padding-left: 10px;
+    margin: 20px 10px 0px 10px;
 
-    align-items: center !important;
-    justify-content: center !important;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+
+    background-color: var(--black);
+
+    border-radius: 10px;
+
+    flex: 2 1 auto;
 }
-
 .card_button img {
     display: block;
     height: 40px;
     padding-left: 10px;
 }
+.card_button img:nth-child(4) {
+    padding-left: 0px;
+}
+#close {
+    width: 100%;
+}
+
+
+.special_card_button {
+    display: flex;
+    flex-direction: row;
+
+    width: 6em;
+    height: 6em;
+
+    margin: 20px 10px 0px 10px;
+
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+
+    background-color: var(--black);
+    border-radius: 10px;
+
+    flex: 1 1 auto;
+}
+.special_card_button:last-child {
+    margin-bottom: 20px;
+}
+
+#termost { width: 3em; }
+#watt { width: 2.5em; } 
+#clock { width: 4em; }
+
 
 @media screen and (max-width: 1180px) {
     h1.title {
         top: -20vh !important;
+    }
+
+    body {
+        overflow: scroll; 
     }
 }
