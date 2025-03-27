@@ -30,29 +30,42 @@ controls.update();
 let object;
 const objToRender = "house_2__cute_series";
 
+let x, y, z;
+
+function change_x_y_x() {
+    if(screen.width < 760 ) {
+        x = 35;
+        y = 35;
+        z = 35;
+    } else if(screen.width < 1080) {
+        x = 40;
+        y = 40;
+        z = 40;
+    } else {    
+        x = 50;
+        y = 50;
+        z = 50;
+    }   
+    
+    console.log(screen.width);
+
+}
 
 const loader = new GLTFLoader();
 loader.load(
     `../models/${objToRender}/scene.gltf`,
 
     function (gltf) {
+        change_x_y_x();
+
         object = gltf.scene;
-        
         object.position.set(0, 0, 100);
-
-        if(window.matchMedia("(max-width: 1080px)").matches) {
-            camera.position.set(200, 250, 1000);
-            object.scale.set(40, 35, 40);
-        } else if(window.matchMedia("(max-width: 768px)").matches) {
-            camera.position.set(200, 250, 650);
-            object.scale.set(40, 35, 40);
-        } else {
-            camera.position.set(200, 250, 650);
-            object.scale.set(50, 50, 50);   
-        }
-
+        object.scale.set(x, y, z);    
         object.rotation.y = 1.6;
+
+        camera.position.set(200, 250, 650);
         camera.lookAt(10, 10, 70);
+
         scene.add(object);
     },
 
