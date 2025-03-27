@@ -103,15 +103,29 @@ h1.title {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: space-evenly;
     
 }
 .card_button {
-    padding-left: 20px;
-    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
     
-    flex: 1 0 40%;
+    width: 40%;
+
+    padding-top: 20px;
+    padding-left: 10px;
+
+    align-items: center !important;
+    justify-content: center !important;
 }
 
+.card_button img {
+    display: block;
+    height: 40px;
+    padding-left: 10px;
+}
 
 @media screen and (max-width: 1180px) {
     h1.title {
