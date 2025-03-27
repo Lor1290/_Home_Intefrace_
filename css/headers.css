@@ -1,0 +1,152 @@
+@import url("./mains.css");
+
+nav {
+    width: 100%;
+
+    min-height: 50px;
+    max-height: 90px;
+
+    height: 20vh;
+    background-color: var(--black);  
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}   
+
+a {
+    font-family: var(--std_font);
+    font-size: 1.5em;
+    font-weight: 750;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: var(--white_hover);
+}
+
+ul {
+    margin: 0px auto;
+    list-style-type: none;
+}
+ul > li {
+    padding-left: 50px;
+    display: inline-block;
+}
+ul > li:first-child {
+    padding-left: 0px;
+}
+
+li > a {
+    transition: 2s;
+
+    display: inline-block;
+    padding-bottom: 0.25em;
+    position: relative;
+
+    font-size: clamp(10px, 1.4em, 20px);
+}
+
+li > a::before {
+    content: "";
+    position: absolute;
+    
+    left: 0px;
+    bottom: 0px;
+    width: 0px;
+    height: 3px;
+
+    background-color: var(--white_hover);
+    transition: width 0.25s ease-out;
+}
+li > a:hover::before {
+    width: 100%;
+}
+
+
+#logo {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+#logo p {
+    font-family: var(--std_font); 
+    color: var(--white_hover);
+    text-transform: uppercase;
+}
+#logo p > a {
+    font-size: 1.2em;
+}
+
+#link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    padding-right: 70px;
+}
+
+#img_logo {
+    height: 20vh;
+    min-height: 50px;
+    max-height: 70px;
+
+    padding-left: 50px;
+}
+
+#slit { display: none; }
+#burger_links { display: none; }
+#burger_links > a { display: none; }
+
+
+@media screen and (max-width: 1080px) {
+    #img_logo { padding-left: 0px; }
+    #link { display: none; } 
+    #link > * { display: none; }
+
+    #slit {
+        width: 10%;
+        margin-right: 10px;
+
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #burger {
+        overflow: hidden;
+        background-color: transparent;
+        position: relative;
+    }
+
+    #burger_links {
+        position: absolute;
+        top: 0%;
+        right: 0px;
+
+        width: 100%;
+        text-align: right;
+        float: right;
+
+        display: none;
+        background-color: var(--black);
+        z-index: 10;
+    }
+    #burger_links > a {
+        font-size: 1.3em;
+        display: block;
+        text-align: right;
+        
+        padding-right: 5%;
+        line-height: 1.5;
+
+        color: var(--white_hover);
+        
+    }
+    #burger_links > a:hover {
+        background-color: var(--white_hover);
+        color: var(--black);
+    }
+
+}

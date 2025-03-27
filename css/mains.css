@@ -1,0 +1,106 @@
+:root {
+    --black: #1D1616;
+    --cyan: #4169E1;
+
+    --black_card: #212121;
+    --black_link: #1D1616;
+
+    --white_hover: #DBDBDB;
+
+    --std_font: sans-serif, Helvetica, Verdana;
+}
+
+@font-face {
+    font-family: "Manolo";
+    src: url("../font/manolo-mono.ttf");
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: var(--cyan);
+    overflow: hidden; 
+}
+
+h1.title {
+    font-family: var(--std_font);
+    font-weight: 1000;
+    color: var(--white_hover);
+
+    font-size: clamp(40px, 6vw, 500px);
+    font-style: italic;
+
+    position: relative;
+    top: -17vh;
+}
+
+#body_3D {
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+
+}
+
+#container3D {
+    width: 80vw;
+    height: 80vh;
+
+    padding-left: 10%;
+}
+#container3D canvas {
+    width: 100% !important;
+    height: 100% !important;
+
+    max-height: 600px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#card {
+    background-color: var(--black_card);
+    border-radius: 20px;
+    
+    position: relative;
+    width: 25vw;
+    height: 60vh;
+    top: -5vh;
+
+    min-width: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: var(--std_font);
+    color: var(--white_hover);
+}
+#card > h1 {
+    padding-top: 20px;
+    text-align: center;
+}
+.card_text:first-of-type, .card_text:nth-last-of-type(4){
+    padding-top: 20px;
+}
+.card_text {
+    float: left;
+    padding-left: 30px;
+    
+    line-height: 1.3em;
+}
+
+
+
+@media screen and (max-width: 1180px) {
+    h1.title {
+        top: -20vh !important;
+    }
+}

@@ -1,0 +1,25 @@
+@import url("./mains.css");
+
+
+.bar {
+    width: 35px;
+    height: 5px;
+
+    background-color: var(--white_hover);
+    margin: 6px 0;
+    transition: 0.4s;
+} 
+ 
+.bar:first-child {
+    margin-top: 35%;
+}
+
+.change .bar:first-child {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+.change .bar:nth-child(3) {
+    transform: translate(0, -11px) rotate(45deg);
+}
+.change .bar:nth-child(2) {
+    opacity: 0;
+}
