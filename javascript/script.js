@@ -1,7 +1,5 @@
 "use strict";
 
-let burger = document.getElementById("burger");
-
 let temperature;
 let prev = 0;
 let watt = 0;
@@ -69,22 +67,6 @@ function change_watt() {
         prev = watt;
     }
 }
-
-
-burger.addEventListener("click", () => {    
-    burger.classList.toggle("change");
-
-    let drop_down = document.getElementById("burger_links");
-    let nav = document.getElementsByTagName("nav")[0];
-
-    if(drop_down.style.display === "block") {
-        drop_down.style.display = "none";   
-    } else { 
-        drop_down.style.display = "block";
-        drop_down.style.top = nav.offsetHeight + "px";
-    }    
-
-});
 
 slider.addEventListener("input", () => {
     temp_header.innerText = slider.value;
