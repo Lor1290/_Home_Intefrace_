@@ -1,18 +1,18 @@
 "use strict";
 
-import * as three from "../node_modules/three/src/Three.js";
-import { GLTFLoader } from "../node_modules/three/examples/jsm/loaders/GLTFLoader.js";
-import { OrbitControls } from "../node_modules/three/examples/jsm/controls/OrbitControls.js";
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.117.1/build/three.module.js';
+import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.117.1/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.117.1/examples/jsm/controls/OrbitControls.js';
 
-const scene = new three.Scene();
+const scene = new THREE.Scene();
 
-const renderer = new three.WebGLRenderer( {alpha: true} );
+const renderer = new THREE.WebGLRenderer( {alpha: true} );
 const container3D = document.getElementById("container3D"); 
 
 renderer.setSize(window.innerHeight, window.innerHeight);
 container3D.appendChild(renderer.domElement);
 
-const camera = new three.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 8000);
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 8000);
 camera.position.z = 1000;
 
 const controls = new OrbitControls(camera, renderer.domElement);
@@ -79,10 +79,10 @@ loader.load(
 );
 
 
-const topLight = new three.DirectionalLight(0xffffff, 1);
+const topLight = new THREE.DirectionalLight(0xffffff, 1);
 topLight.position.set(100, 10, 10);
 
-const ambientLight = new three.AmbientLight(0x333333, 1);
+const ambientLight = new THREE.AmbientLight(0x333333, 1);
 
 scene.add(topLight);
 scene.add(ambientLight);
