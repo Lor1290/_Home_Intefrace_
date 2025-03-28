@@ -1,8 +1,8 @@
 "use strict";
 
-import * as three from "https://cdn.skypack.dev/three@0.136.0";
-import { GLTFLoader } from  "https://cdn.skypack.dev/three@0.136.0/examples/jsm/loaders/GLTFLoader.js";
-import { OrbitControls } from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls.js";
+import * as three from "../node_modules/three/src/Three.js";
+import { GLTFLoader } from "../node_modules/three/examples/jsm/loaders/GLTFLoader.js";
+import { OrbitControls } from "../node_modules/three/examples/jsm/controls/OrbitControls.js";
 
 const scene = new three.Scene();
 
