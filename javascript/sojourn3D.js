@@ -53,7 +53,7 @@ loader.load(
 
         object = gltf.scene;
         object.position.set(-100, 0, 80);
-        object.rotation.y = 1.85;
+        object.rotation.y = 2;
         object.scale.set(x, y, z);    
         
 
