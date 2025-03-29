@@ -48,9 +48,9 @@ function change_x_y_x() {
 
 }
 
-const loader = new GLTFLoader();
+const loader = new GLTFLoader().setPath("https://raw.githubusercontent.com/Lor1290/_Home_Intefrace_/refs/heads/main/assets/house/");
 loader.load(
-    `../assets/house/scene.gltf`,
+    `scene.gltf`,
 
     function (gltf) {
         change_x_y_x();
