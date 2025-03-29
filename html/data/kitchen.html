@@ -21,6 +21,26 @@
               }
             }
         </script>
+        <style>
+            #body_3D {
+                width: 100vw;
+                height: 100vh;
+                
+                
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+            #container3D {
+                width: 50vw;
+                height: 50vh;
+
+                min-width: 300px;
+            }
+
+        </style>
     </head>
     <body>
 
@@ -64,96 +84,102 @@
         <span></span>
         <section>
             <div id="body_3D">
-                <div id="card">
 
-                   <h1> CONTROLLER </h1> <hr />  
-                    
-                   <div class = "lights">
+                <div id="container3D"></div>
 
-                        <div class="card_button">
-                            <label class="switch">
-                                <input class="cb" type="checkbox" id="open_light"/>
-                                <span class="toggle">
-                                    <span class="left">off</span>
-                                    <span class="right">on</span>
-                                </span>
-                            </label>
-                            <img id="switch_on" src="../../img/lights_off.png" alt="light">
-                        </div>  
+                <div id="container2D">
+                    <div id="card">
 
-                        <div class="card_button">
-                            <label class="switch">
-                                <input class="cb" type="checkbox" id="open_termos"/>
-                                <span class="toggle">
-                                    <span class="left">off</span>
-                                    <span class="right">on</span>
-                                </span>
-                            </label>
-                            <img src="../../img/termosifone.png" alt="termos">
-                        </div> 
+                    <h1> CONTROLLER </h1> <hr />  
+                        
+                    <div class = "lights">
 
-                        <div class="card_button">
-                            <label class="switch">
-                                <input class="cb" type="checkbox" id="open_door"/>
-                                <span class="toggle">
-                                    <span class="left">off</span>
-                                    <span class="right">on</span>
-                                </span>
-                            </label>
-                            <img id="door_on" src="../../img/door_closed.png" alt="door">
-                        </div> 
+                            <div class="card_button">
+                                <label class="switch">
+                                    <input class="cb" type="checkbox" id="open_light" checked="checked"/>
+                                    <span class="toggle">
+                                        <span class="left">off</span>
+                                        <span class="right">on</span>
+                                    </span>
+                                </label>
+                                <img id="switch_on" src="../../img/lights_off.png" alt="light">
+                            </div>  
 
-                        <div class="card_button">
-                            <img src="../../img/termostato.png" alt="temperature">
-                            <label class="slider">
-                                <input type="range" value="36" min="0" max="50" step="1" class="level">
-                            </label>
+                            <div class="card_button">
+                                <label class="switch">
+                                    <input class="cb" type="checkbox" id="open_termos"/>
+                                    <span class="toggle">
+                                        <span class="left">off</span>
+                                        <span class="right">on</span>
+                                    </span>
+                                </label>
+                                <img src="../../img/termosifone.png" alt="termos">
+                            </div> 
+
+                            <div class="card_button">
+                                <label class="switch">
+                                    <input class="cb" type="checkbox" id="open_door"/>
+                                    <span class="toggle">
+                                        <span class="left">off</span>
+                                        <span class="right">on</span>
+                                    </span>
+                                </label>
+                                <img id="door_on" src="../../img/door_closed.png" alt="door">
+                            </div> 
+
+                            <div class="card_button">
+                                <img src="../../img/termostato.png" alt="temperature">
+                                <label class="slider">
+                                    <input type="range" value="36" min="0" max="50" step="1" class="level">
+                                </label>
+                            </div>
+
+                            <div class="card_button">
+                                <label class="switch">
+                                    <input class="cb" type="checkbox" id="open_camera"/>
+                                    <span class="toggle">
+                                        <span class="left">off</span>
+                                        <span class="right">on</span>
+                                    </span>
+                                </label>
+                                <img src="../../img/telecamera.png" alt="camera">
+                            </div> 
+
+                            <div class="card_button" id="close">
+                                <label class="switch">
+                                    <input class="cb" type="checkbox" id="open_lock"/>
+                                    <span class="toggle">
+                                        <span class="left">off</span>
+                                        <span class="right">on</span>
+                                    </span>
+                                </label>
+                                <img id="lock_on" src="../../img/unblock.png" alt="lock">
+                            </div> 
+                                
+                            <div class="special_card_button">
+                                <h1 id="h1_temp">36</h1><h1>&#8451;</h1>
+                                <img src="../../img/temperature.png" alt="up_and_down_temperature" id="termost">
+                            </div> 
+
+                            <div class="special_card_button">
+                                <h1 id="h1_watt">12</h1><h1>W</h1>
+                                <img src="../../img/watt.png" alt="watt" id="watt">
+                            </div> 
+
+                            <div class="special_card_button" id="also_close">
+                                <h1 id="h1_hour"></h1>
+                                <img src="../../img/clock.png" alt="clock" id="clock">
+                            </div> 
+
                         </div>
 
-                        <div class="card_button">
-                            <label class="switch">
-                                <input class="cb" type="checkbox" id="open_camera"/>
-                                <span class="toggle">
-                                    <span class="left">off</span>
-                                    <span class="right">on</span>
-                                </span>
-                            </label>
-                            <img src="../../img/telecamera.png" alt="camera">
-                        </div> 
-
-                        <div class="card_button" id="close">
-                            <label class="switch">
-                                <input class="cb" type="checkbox" id="open_lock"/>
-                                <span class="toggle">
-                                    <span class="left">off</span>
-                                    <span class="right">on</span>
-                                </span>
-                            </label>
-                            <img id="lock_on" src="../../img/unblock.png" alt="lock">
-                        </div> 
-                            
-                        <div class="special_card_button">
-                            <h1 id="h1_temp">36</h1><h1>&#8451;</h1>
-                            <img src="../../img/temperature.png" alt="up_and_down_temperature" id="termost">
-                        </div> 
-
-                        <div class="special_card_button">
-                            <h1 id="h1_watt">0</h1><h1>W</h1>
-                            <img src="../../img/watt.png" alt="watt" id="watt">
-                        </div> 
-
-                        <div class="special_card_button">
-                            <h1 id="h1_hour"></h1>
-                            <img src="../../img/clock.png" alt="clock" id="clock">
-                        </div> 
-
                     </div>
-
                 </div>
             </div>    
         </section>
 
+        <script type="module" src="../../javascript/kitchen3D.js"></script>
         <script type="text/javascript" src="../../javascript/script.js"></script>
-        <script type="text/javascript" src="./javascript/burger.js"></script>
+        <script type="text/javascript" src="../../javascript/burger.js"></script>
     </body>
 </html>

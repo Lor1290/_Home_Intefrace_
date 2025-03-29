@@ -21,8 +21,10 @@
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
     background-color: var(--cyan);
-    overflow: hidden; 
+    overflow-x: hidden;
 }
 
 h1.title {
@@ -43,6 +45,7 @@ h1.title {
     
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 
@@ -52,16 +55,24 @@ h1.title {
     width: 80vw;
     height: 80vh;
 
-    padding-left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #container3D canvas {
     width: 100% !important;
     height: 100% !important;
 
-
     display: flex;
     align-items: center;
     justify-content: center;
+}
+#container2D {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 #card {
@@ -78,6 +89,7 @@ h1.title {
 
     font-family: var(--std_font);
     color: var(--white_hover);
+  
 }
 
 #card > h1 {
@@ -132,9 +144,9 @@ h1.title {
 .card_button img:nth-child(4) {
     padding-left: 0px;
 }
-#close {
-    width: 100%;
-}
+
+#close { width: 100%; }
+#also_close { width: 100%; }
 
 
 .special_card_button {
@@ -158,6 +170,9 @@ h1.title {
 .special_card_button:last-child {
     margin-bottom: 20px;
 }
+.special_card_button > h1 {
+    font-size: 150%;
+}
 
 #termost { width: 3em; }
 #watt { width: 2.5em; } 
@@ -165,11 +180,7 @@ h1.title {
 
 
 @media screen and (max-width: 1180px) {
-    h1.title {
-        top: -20vh !important;
-    }
-
-    body {
-        overflow: scroll; 
-    }
+    h1.title { top: -20vh !important; }
+    #container3D { clear: both; }
+    #container2D { width: 100%; }
 }
