@@ -29,9 +29,9 @@ let x, y, z;
 
 function change_x_y_x() {
     if(screen.width < 760 ) {
-        x = 35;
-        y = 35;
-        z = 35;
+        x = 30;
+        y = 30;
+        z = 30;
     } else if(screen.width < 1080) {
         x = 40;
         y = 40;

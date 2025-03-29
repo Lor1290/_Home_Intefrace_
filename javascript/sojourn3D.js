@@ -30,13 +30,13 @@ let lights = 0x000000;
 
 function change_x_y_x() {
     if(screen.width < 760 ) {
-        x = 120;
-        y = 160;
-        z = 120;
+        x = 100;
+        y = 130;
+        z = 100;
     } else if(screen.width < 1080) {
-        x = 140;
-        y = 140;
-        z = 140;
+        x = 120;
+        y = 120;
+        z = 120;
     } else {    
         x = 140;
         y = 140;
@@ -53,7 +53,7 @@ loader.load(
 
         object = gltf.scene;
         object.position.set(-100, 0, 80);
-        object.rotation.y = 2;
+        object.rotation.y = 2.1;
         object.scale.set(x, y, z);    
         
 
