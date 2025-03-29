@@ -28,7 +28,7 @@ controls.target.set(10, 0, 10);
 controls.update();
 
 let object;
-const objToRender = "house_2__cute_series";
+const objToRender = "house_2_cute_series";
 
 let x, y, z;
 
