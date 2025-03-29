@@ -28,8 +28,6 @@ controls.target.set(10, 0, 10);
 controls.update();
 
 let object;
-const objToRender = "house_2_cute_series";
-
 let x, y, z;
 
 function change_x_y_x() {
@@ -46,14 +44,13 @@ function change_x_y_x() {
         y = 50;
         z = 50;
     }   
-    
-    console.log(screen.width);
+
 
 }
 
 const loader = new GLTFLoader();
 loader.load(
-    `../models/${objToRender}/scene.gltf`,
+    `../public/scene.gltf`,
 
     function (gltf) {
         change_x_y_x();
