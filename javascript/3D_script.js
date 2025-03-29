@@ -48,9 +48,9 @@ function change_x_y_x() {
 
 }
 
-const loader = new GLTFLoader().setPath("./assets/house");
+const loader = new GLTFLoader().setPath("./assets/house/");
 loader.load(
-    `scene.gltf`,
+    `scene.glb`,
 
     function (gltf) {
         change_x_y_x();
