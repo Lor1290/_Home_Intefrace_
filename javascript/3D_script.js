@@ -50,7 +50,7 @@ function change_x_y_x() {
 
 const loader = new GLTFLoader();
 loader.load(
-    `../public/scene.gltf`,
+    `../assets/house/scene.gltf`,
 
     function (gltf) {
         change_x_y_x();
