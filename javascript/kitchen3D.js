@@ -30,17 +30,17 @@ let lights = 0x000000;
 
 function change_x_y_x() {
     if(screen.width < 760 ) {
-        x = 60;
-        y = 70;
-        z = 70;
+        x = 50;
+        y = 60;
+        z = 60;
     } else if(screen.width < 1080) {
-        x = 60;
-        y = 70;
-        z = 70;
+        x = 50;
+        y = 60;
+        z = 60;
     } else {    
-        x = 100;
-        y = 90;
-        z = 90;
+        x = 90;
+        y = 80;
+        z = 80;
     }   
 }
 
