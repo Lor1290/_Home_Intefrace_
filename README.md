@@ -20,3 +20,9 @@ farlo visitando il nostro sito al seguente link: <br />
 <br/><br/>
 
 <a href="https://lor1290.github.io/_Home_Intefrace_/" target="_blank">Home Interface</a>
+
+## P.S.
+Consigliamo, per gli utenti che vogliono aprire il nostro sito, di utilizzare il web-browser CHROME. <br/>
+Oltre a cio, e consigliato aspettare alcuni secondi prima che i modelli 3D presenti all'interno del nostro <br/>
+sito possano caricare completamente. Uno dei punti forti del nostro team è prorio il 3D, una esperienza unica <br/>
+con cui l'utente può immgergersi all'interno della sua nuova casa.
