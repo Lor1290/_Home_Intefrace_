@@ -30,21 +30,21 @@ let lights = 0x000000;
 
 function change_x_y_x() {
     if(screen.width < 760 ) {
-        x = 100;
-        y = 130;
-        z = 100;
-    } else if(screen.width < 1080) {
-        x = 120;
+        x = 80;
         y = 120;
-        z = 120;
+        z = 80;
+    } else if(screen.width < 1080) {
+        x = 100;
+        y = 100;
+        z = 100;
     } else {    
-        x = 140;
-        y = 140;
-        z = 140;
+        x = 130;
+        y = 130;
+        z = 130;
     }   
 }
 
-const loader = new GLTFLoader().setPath("../../assets/living_room/");
+const loader = new GLTFLoader().setPath("../../assets/bedroom/");
 loader.load(
     `scene.glb`,
 
@@ -53,8 +53,16 @@ loader.load(
 
         object = gltf.scene;
         object.position.set(-100, 0, 80);
-        object.rotation.y = 2.1;
-        object.scale.set(x, y, z);    
+        object.rotation.y = 1.5 ;
+        object.scale.set(x, y, z); 
+        
+        if(screen.width < 760) {
+            object.position.set(-100, -80, 0);
+        } else if(screen.width < 1080) {
+            object.position.set(-100, -60, 0);
+        } else {
+            object.position.set(-100, 0, 0);
+        }   
         
 
         object.traverse((child) => {
@@ -91,7 +99,7 @@ loader.load(
 );
 
 
-const ambientLight = new THREE.AmbientLight(0x333333, 1);
+const ambientLight = new THREE.AmbientLight(0x888888, 1);
 scene.add(ambientLight);
 
 
@@ -115,7 +123,7 @@ checks_light.addEventListener("click", (e) => {
     const checkbox = e.target;  
     
     if(checkbox.checked) {
-        lights = 0x333333;
+        lights = 0x888888;
     } else {
         lights = 0x000000;
     }
