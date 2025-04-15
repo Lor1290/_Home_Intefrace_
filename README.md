@@ -25,4 +25,4 @@ farlo visitando il nostro sito al seguente link: <br />
 Consigliamo, per gli utenti che vogliono aprire il nostro sito, di utilizzare il web-browser CHROME. <br/>
 Oltre a cio, e consigliato aspettare alcuni secondi (fino ad un massimo di un minuto) prima che i modelli <br/>
 3D presenti all'interno del nostro sito possano caricare completamente. Uno dei punti forti del nostro team è <br/>
-prorio il 3D, una esperienza unica con cui l'utente può immgergersi all'interno della sua nuova casa. <br/>
+proprio il 3D, una esperienza unica con cui l'utente può immergersi all'interno della sua nuova casa. <br/>
