@@ -29,32 +29,30 @@ let x, y, z;
 
 function change_x_y_x() {
     if(screen.width < 760 ) {
-        x = 30;
-        y = 30;
-        z = 30;
-    } else if(screen.width < 1080) {
         x = 40;
         y = 40;
         z = 40;
-    } else {    
+    } else if(screen.width < 1080) {
         x = 50;
         y = 50;
         z = 50;
+    } else {    
+        x = 60;
+        y = 60;
+        z = 60;
     }   
 }
 
 const loader = new GLTFLoader().setPath("./assets/house/");
 loader.load(
-    `scene.glb`,
+    'scene.glb',
 
     function (gltf) {
         change_x_y_x();
 
         object = gltf.scene;
-        object.position.set(120, 0, 100);
+        object.position.set(0, 0, 100);
         object.scale.set(x, y, z);
-
-        object.rotation.y = 1.6;
 
         camera.position.set(200, 250, 650);
         camera.lookAt(10, 10, 70);
@@ -71,6 +69,9 @@ loader.load(
     }
 );
 
+
+const ambientLight = new THREE.AmbientLight(0xffffff, 2);
+scene.add(ambientLight)
 
 window.addEventListener("resize", function () {
     camera.aspect = window.innerWidth / window.innerHeight;
