@@ -43,6 +43,19 @@
     </head>
     <body>
 
+        <div id="cookie_blinder">
+            <div class="form-box">
+                <form class="form">
+                    <span class="title">DATA - HOUSE</span>
+                    <div class="form-container">
+                        <input type="number" step="0.1" min="0" max="2.7" id = "voltage_input" class="input" placeholder="Voltage">
+                        <input type="number" step="1" min="0" max="50"id = "temperature_input" class="input" placeholder="Temperature">
+                    </div>
+                    <button id="send_data">send</button>
+                </form>
+            </div>
+        </div>
+
         <header>
             <nav>
                 <div id="logo">
@@ -155,12 +168,12 @@
                             </div> 
                                 
                             <div class="special_card_button">
-                                <h1 id="h1_temp">20</h1><h1>&#8451;</h1>
+                                <h1 id="h1_temp"></h1><h1>&#8451;</h1>
                                 <img src="../../img/temperature.png" alt="up_and_down_temperature" id="termost">
                             </div> 
 
                             <div class="special_card_button">
-                                <h1 id="h1_watt">212</h1><h1>W</h1>
+                                <h1 id="h1_watt"></h1><h1>W</h1>
                                 <img src="../../img/watt.png" alt="watt" id="watt">
                             </div> 
 
@@ -179,5 +192,6 @@
         <script type="module" src="../../javascript/sojourn3D.js"></script>
         <script type="text/javascript" src="../../javascript/script.js"></script>
         <script type="text/javascript" src="../../javascript/burger.js"></script>
+        <script type="text/javascript" src="../../javascript/cookies/cooky.js"></script>
     </body>
 </html>

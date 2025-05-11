@@ -179,6 +179,30 @@ h1.title {
 #clock { width: 4em; }
 
 
+
+#cookie_blinder {
+    z-index: 2;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+
+    top: 0%;
+    left: 0%;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+}
+
+
+
+
 @media screen and (max-width: 1180px) {
     h1.title { top: -20vh !important; }
     #container3D { clear: both; }
