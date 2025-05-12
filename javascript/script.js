@@ -91,16 +91,18 @@ check_termos.addEventListener("click", (e) => {
 
 
 function change_watt() {
-    watt_header.innerText = Number.parseInt(watt_header.innerText || 0)+watt;
+    watt_header.innerText = parseInt(watt_header.innerText || 0)+watt;
 }
 
 slider.addEventListener("input", () => {
     temp_header.innerText = slider.value;
     
     if( Math.abs(slider.value) - 20 > 10) 
-        watt = 10;
+        watt = 2;
     else 
-        watt = 5;
+        watt = 1;
+
+    change_watt();    
 });
 setInterval(function update_time() {
     let d = new Date();

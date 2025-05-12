@@ -35,7 +35,7 @@ let temperatureCookie = getCookieValue("temperature");
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    volt_data.innerText = Math.floor(parseFloat(voltageCookie) * 100) + 12;
+    volt_data.innerText = Math.floor(parseFloat(voltageCookie)*1000) + 12;
     temp_data.innerText = parseFloat(temperatureCookie);
 });
 

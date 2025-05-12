@@ -179,7 +179,6 @@ h1.title {
 #clock { width: 4em; }
 
 
-
 #cookie_blinder {
     z-index: 2;
 
@@ -207,4 +206,7 @@ h1.title {
     h1.title { top: -20vh !important; }
     #container3D { clear: both; }
     #container2D { width: 100%; }
+
+    #h1_watt { font-size: 1.2em; }
+    #h1_watt_m { font-size: 1.2em;}
 }
